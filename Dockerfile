@@ -4,7 +4,8 @@ MAINTAINER Vitaly Lobchuk vn.lobchuk@gmail.com
 
 RUN apt-get update
 RUN apt-get install software-properties-common -y
-RUN add-apt-repository ppa:ondrej/php-7.0 && apt-get update
+RUN apt-get install -y language-pack-en-base && LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php
+RUN apt-get update
 RUN apt-get purge php5-fpm -y
 RUN apt-get install php7.0 php7.0-fpm -y --force-yes
 RUN apt-get --purge autoremove -y
