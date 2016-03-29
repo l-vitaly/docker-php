@@ -1,0 +1,8 @@
+#!/bin/sh
+
+service php7.0-fpm stop
+service php7.0-fpm start
+
+while(true) do
+  sleep 60
+done
