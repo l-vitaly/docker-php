@@ -1,0 +1,3 @@
+#!/bin/sh
+
+composer config -g github-oauth.github.com $GIT_OAUTH_TOKEN
