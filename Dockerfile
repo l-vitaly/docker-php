@@ -18,11 +18,10 @@ RUN chmod +x /usr/bin/composer
 
 COPY php-fpm.conf /etc/php/7.0/fpm/pool.d/www.conf
 COPY fpm-start /usr/bin/
-COPY composer-setup /usr/bin/
-
+COPY ./composer-setup /
 
 RUN chmod +x /usr/bin/fpm-start
-RUN chmod +x /usr/bin/composer-setup
+RUN chmod +x /composer-setup
 
 EXPOSE 9000
 
