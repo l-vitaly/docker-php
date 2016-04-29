@@ -18,12 +18,12 @@ RUN chmod +x /usr/bin/composer
 
 COPY php-fpm.conf /etc/php/7.0/fpm/pool.d/www.conf
 COPY fpm-start /usr/bin/
-COPY composer-setup /usr/bin/
-
+COPY ./docker-entrypoint.sh /
 
 RUN chmod +x /usr/bin/fpm-start
-RUN chmod +x /usr/bin/composer-setup
 
 EXPOSE 9000
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ["fpm-start"]
