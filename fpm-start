@@ -3,6 +3,8 @@
 service php7.0-fpm stop
 service php7.0-fpm start
 
+/usr/bin/composer-setup
+
 while(true) do
   sleep 60
 done
