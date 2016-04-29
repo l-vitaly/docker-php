@@ -24,8 +24,6 @@ COPY composer-setup /usr/bin/
 RUN chmod +x /usr/bin/fpm-start
 RUN chmod +x /usr/bin/composer-setup
 
-RUN /usr/bin/composer-setup
-
 EXPOSE 9000
 
 CMD ["fpm-start"]
